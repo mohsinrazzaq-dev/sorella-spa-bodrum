@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sorella Spa Bodrum — VIP hamam, masaj ve özel spa deneyimi.">
+  <title>Sorella Spa Bodrum | VIP Spa & Masaj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17130f;
+      --cream: #f7f2ea;
+      --sand: #ead9bf;
+      --gold: #c69a55;
+      --gold2: #e3c18a;
+      --muted: #766e64;
+      --white: #fff;
+      --line: rgba(23, 19, 15, .12)
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Manrope, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto
+    }
+
+    .topbar {
+      background: #0f0d0b;
+      color: #d9c3a1;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    header {
+      position: absolute;
+      top: 34px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      color: #fff
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 18px 0
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      letter-spacing: .12em
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, .55)
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 28px;
+      font-size: 13px
+    }
+
+    .navlinks a {
+      opacity: .9
+    }
+
+    .navlinks a:hover {
+      color: var(--gold2)
+    }
+
+    .navcta {
+      padding: 12px 18px;
+      border-radius: 30px;
+      background: var(--gold);
+      color: #17130f;
+      font-weight: 700;
+      font-size: 13px
+    }
+
+    .menu {
+      display: none;
+      background: none;
+      border: 0;
+      color: #fff;
+      font-size: 26px
+    }
+
+    .hero {
+      min-height: 790px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(11, 9, 7, .82) 0%, rgba(11, 9, 7, .60) 43%, rgba(11, 9, 7, .18) 100%),
+        url("assets/hero.avif") center/cover
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 160px;
+      background: linear-gradient(transparent, var(--cream))
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding-top: 80px;
+      max-width: 720px
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--gold2);
+      margin-bottom: 18px
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500
+    }
+
+    h1 {
+      font-size: clamp(58px, 8vw, 100px);
+      line-height: .88;
+      margin-bottom: 25px
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      color: #eee3d6
+    }
+
+    .actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 30px
+    }
+
+    .btn {
+      border: 1px solid var(--gold2);
+      padding: 14px 22px;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: .25s
+    }
+
+    .btn.primary {
+      background: var(--gold);
+      color: #17130f;
+      border-color: var(--gold)
+    }
+
+    .btn:hover {
+      transform: translateY(-2px)
+    }
+
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 55px
+    }
+
+    .trust div {
+      padding: 14px 15px;
+      border-top: 1px solid rgba(255, 255, 255, .3)
+    }
+
+    .trust b {
+      display: block;
+      color: #fff;
+      font-size: 13px
+    }
+
+    .trust span {
+      font-size: 11px;
+      color: #d7c9b8
+    }
+
+    section {
+      padding: 95px 0
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 45px
+    }
+
+    .section-head .eyebrow {
+      color: #a8793e
+    }
+
+    h2 {
+      font-size: clamp(42px, 5vw, 62px);
+      line-height: 1
+    }
+
+    .section-head p {
+      max-width: 600px;
+      margin: 14px auto 0;
+      color: var(--muted)
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: .3s;
+      box-shadow: 0 12px 35px rgba(40, 25, 10, .06)
+    }
+
+    .card:hover {
+      transform: translateY(-7px)
+    }
+
+    .card-img {
+      height: 245px;
+      object-fit: cover;
+      width: 100%
+    }
+
+    .card-body {
+      padding: 22px
+    }
+
+    .card h3 {
+      font-size: 31px
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 7px 0 17px
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #9b6c31;
+      font-weight: 800
+    }
+
+    .round {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid #d9bd92
+    }
+
+    .vip {
+      background: #17130f;
+      color: #fff;
+      position: relative;
+      overflow: hidden
+    }
+
+    .vip:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(15, 12, 9, .94), rgba(15, 12, 9, .55)), url("assets/vipbefore.avif") center/cover
+    }
+
+    .vip .container {
+      position: relative;
+      z-index: 1
+    }
+
+    .vip-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center
+    }
+
+    .vip h2 {
+      color: #fff
+    }
+
+    .vip p {
+      color: #d9d0c5;
+      margin: 20px 0
+    }
+
+    .checks {
+      display: grid;
+      gap: 13px;
+      margin: 25px 0
+    }
+
+    .checks span:before {
+      content: "✓";
+      color: var(--gold2);
+      margin-right: 12px
+    }
+
+    .booking {
+      background: #fff
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 50px;
+      align-items: start
+    }
+
+    .booking-copy {
+      padding-top: 25px
+    }
+
+    .booking-copy p {
+      color: var(--muted);
+      margin: 18px 0
+    }
+
+    .info {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px
+    }
+
+    .info div {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .form {
+      padding: 32px;
+      border: 1px solid var(--line);
+      box-shadow: 0 15px 45px rgba(40, 25, 10, .08);
+      background: #fff
+    }
+
+    .form h3 {
+      font-size: 34px;
+      margin-bottom: 20px
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px
+    }
+
+    .field.full {
+      grid-column: 1/-1
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 6px;
+      color: #665d53
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #ddd1c2;
+      padding: 13px 12px;
+      background: #fbf8f3;
+      font: inherit;
+      outline: none;
+      border-radius: 2px
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold)
+    }
+
+    textarea {
+      min-height: 95px;
+      resize: vertical
+    }
+
+    .form .btn {
+      width: 100%;
+      justify-content: center;
+      margin-top: 15px
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 250px 250px;
+      gap: 12px
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .gallery img:first-child {
+      grid-row: span 2
+    }
+
+    .about {
+      background: #efe6d9
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .about h2 {
+      margin-bottom: 20px
+    }
+
+    .about p {
+      color: var(--muted);
+      margin-bottom: 20px
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    .feature-list div {
+      padding: 15px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-size: 13px
+    }
+
+    footer {
+      background: #0f0d0b;
+      color: #d9d0c5;
+      padding: 60px 0 25px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px
+    }
+
+    .footer-brand {
+      font-family: "Cormorant Garamond";
+      font-size: 34px;
+      color: #fff
+    }
+
+    .footer-grid h4 {
+      color: #fff;
+      margin-bottom: 14px
+    }
+
+    .footer-grid p,
+    .footer-grid a {
+      font-size: 13px;
+      color: #a9a097;
+      display: block;
+      margin: 7px 0
+    }
+
+    .copyright {
+      border-top: 1px solid #302a24;
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 11px;
+      color: #766f68
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100
+    }
+
+    .modal.open {
+      display: flex
+    }
+
+    .modal-box {
+      background: #fff;
+      width: min(650px, 100%);
+      max-height: 90vh;
+      overflow: auto;
+      padding: 32px;
+      position: relative
+    }
+
+    .close {
+      position: absolute;
+      right: 18px;
+      top: 14px;
+      border: 0;
+      background: none;
+      font-size: 28px;
+      cursor: pointer
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #17130f;
+      color: #fff;
+      padding: 15px 18px;
+      border-left: 3px solid var(--gold);
+      display: none;
+      z-index: 120;
+      font-size: 13px
+    }
+
+    @media(max-width:900px) {
+      .navlinks {
+        display: none
+      }
+
+      .menu {
+        display: block
+      }
+
+      .services {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .trust {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .vip-grid,
+      .booking-grid,
+      .about-grid {
+        grid-template-columns: 1fr
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 220px
+      }
+
+      .gallery img:first-child {
+        grid-row: span 1;
+        grid-column: span 2
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:560px) {
+      .hero {
+        min-height: 720px
+      }
+
+      .brand {
+        font-size: 22px
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px
+      }
+
+      .navcta {
+        display: none
+      }
+
+      .services {
+        grid-template-columns: 1fr
+      }
+
+      .trust {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .fields {
+        grid-template-columns: 1fr
+      }
+
+      .field.full {
+        grid-column: auto
+      }
+
+      .hero p {
+        font-size: 15px
+      }
+
+      .hero-content {
+        padding-top: 65px
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto
+      }
+
+      .gallery img,
+      .gallery img:first-child {
+        grid-column: auto;
+        grid-row: auto;
+        height: 250px
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+
+      section {
+        padding: 70px 0
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">Bodrum • Oasis AVM Yanı • Her Gün 12:00–00:00</div>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#"><img src="assets/sorella-logo.jpg" alt="Sorella Spa">SORELLA SPA</a>
+        <div class="navlinks">
+          <a href="#anasayfa">Anasayfa</a><a href="#hizmetler">Hizmetlerimiz</a><a href="#vip">VIP Paketler</a><a
+            href="#galeri">Galeri</a><a href="#hakkimizda">Hakkımızda</a><a href="#iletisim">İletişim</a>
+        </div>
+        <a href="#randevu" class="navcta">Randevu Al</a>
+        <button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Bodrum'un Özel Spa Deneyimi</div>
+          <h1>Kendinize<br>küçük bir mola verin.</h1>
+          <p>Bali Masajı, Sultan Masajı, VIP Hamam ve kişiye özel spa deneyimleriyle bedeninizi ve zihninizi yenileyin.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#randevu">◫ Hemen Randevu Al</a>
+            <a class="btn" href="https://wa.me/905418455403" target="_blank">◉ WhatsApp'tan Yaz</a>
+          </div>
+          <div class="trust">
+            <div><b>♢ VIP Odalar</b><span>Size özel & izole</span></div>
+            <div><b>♧ Profesyonel Terapi</b><span>Uzman terapistler</span></div>
+            <div><b>♡ Hijyen & Güven</b><span>Sağlıklı ortam</span></div>
+            <div><b>★ Google 5.0</b><span>Misafir memnuniyeti</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hizmetler">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Hizmetlerimiz</div>
+          <h2>Rahatlatıcı ve yenileyici deneyimler</h2>
+          <p>Günün yorgunluğunu bırakın. Sorella Spa'da size özel hazırlanmış premium bakım ve masaj deneyimini
+            keşfedin.</p>
+        </div>
+        <div class="services">
+          <article class="card"><img class="card-img"
+              src="assets/Bali Masajı.avif"
+              alt="Bali Masajı">
+            <div class="card-body">
+              <h3>Bali Masajı</h3>
+              <p>Uzak Doğu'nun rahatlatıcı dokunuşlarıyla derin bir gevşeme.</p>
+              <div class="price"><span>₺1.500</span><button class="round"
+                  onclick="openBooking('Bali Masajı')">→</button></div>
+            </div>
+          </article>
+          <article class="card"><img class="card-img"
+              src="assets/Kese Köpük.avif"
+              alt="Kese Köpük">
+            <div class="card-body">
+              <h3>Kese & Köpük</h3>
+              <p>Geleneksel hamam keyfi ile temizlik, arınma ve rahatlama.</p>
+              <div class="price"><span>₺1.200</span><button class="round"
+                  onclick="openBooking('Kese & Köpük')">→</button></div>
+            </div>
+          </article>
+          <article class="card"><img class="card-img"
+              src="assets/Sultan Masajı.avif"
+              alt="Sultan Masajı">
+            <div class="card-body">
+              <h3>Sultan Masajı</h3>
+              <p>Lüks ve ayrıcalıklı bir masaj deneyimi.</p>
+              <div class="price"><span>₺2.000</span><button class="round"
+                  onclick="openBooking('Sultan Masajı')">→</button></div>
+            </div>
+          </article>
+          <article class="card"><img class="card-img"
+              src="assets/VIP Paketler.avif"
+              alt="VIP Paketler">
+            <div class="card-body">
+              <h3>VIP Paketler</h3>
+              <p>Size özel izole odalarda unutulmaz bir deneyim.</p>
+              <div class="price"><span>₺3.000+</span><button class="round" onclick="openBooking('VIP Paket')">→</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="vip" id="vip">
+      <div class="container vip-grid">
+        <div>
+          <div class="eyebrow">Sorella VIP</div>
+          <h2>Size özel.<br>İzole. Unutulmaz.</h2>
+          <p>Özel odalarımızda mahremiyet, konfor ve profesyonel hizmeti bir araya getiriyoruz. Sadece kendinize
+            ayırdığınız zamana odaklanın.</p>
+          <div class="checks"><span>Kişiye özel VIP odalar</span><span>Profesyonel masaj terapistleri</span><span>Hamam
+              & spa ritüelleri</span><span>Çiftlere özel paket seçenekleri</span></div><a class="btn primary"
+            href="#randevu">VIP Paketleri İncele</a>
+        </div>
+        <div></div>
+      </div>
+    </section>
+
+    <section class="booking" id="randevu">
+      <div class="container booking-grid">
+        <div class="booking-copy">
+          <div class="eyebrow">Online Randevu</div>
+          <h2>Kolay ve hızlı<br>randevu alın.</h2>
+          <p>Size en uygun hizmet, tarih ve saati seçin. Randevu talebinizi WhatsApp üzerinden de hızlıca
+            iletebilirsiniz.</p>
+          <div class="info">
+            <div>📍 <span>Oasis AVM Yanı, Bodrum</span></div>
+            <div>🕐 <span>Her gün 12:00 – 00:00</span></div>
+            <div>★ <span>Google 5.0 Misafir Memnuniyeti</span></div>
+            <div>☎ <span>+90 541 845 54 03</span></div>
+          </div>
+        </div>
+        <form class="form" id="bookingForm">
+          <h3>Randevu Talebi</h3>
+          <div class="fields">
+            <div class="field"><label>Hizmet</label><select id="service" required>
+                <option value="">Hizmet seçin</option>
+                <option>Bali Masajı</option>
+                <option>Kese & Köpük</option>
+                <option>Sultan Masajı</option>
+                <option>VIP Paket</option>
+                <option>Çift Masajı</option>
+              </select></div>
+            <div class="field"><label>Tarih</label><input id="date" type="date" required></div>
+            <div class="field"><label>Saat</label><select id="time" required>
+                <option value="">Saat seçin</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+                <option>22:00</option>
+                <option>23:00</option>
+              </select></div>
+            <div class="field"><label>Ad Soyad</label><input id="name" type="text" placeholder="Adınız Soyadınız"
+                required></div>
+            <div class="field"><label>Telefon</label><input id="phone" type="tel" placeholder="+90 5xx xxx xx xx"
+                required></div>
+            <div class="field full"><label>Notunuz</label><textarea id="note"
+                placeholder="Varsa özel talebiniz..."></textarea></div>
+          </div><button class="btn primary" type="submit">◫ Randevu Talebi Gönder</button>
+          <p style="font-size:11px;color:#82786d;margin-top:10px;text-align:center">Talebiniz WhatsApp üzerinden Sorella
+            Spa ekibine iletilecektir.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Galeri</div>
+          <h2>Sorella'nın atmosferini keşfedin</h2>
+        </div>
+        <div class="gallery">
+          <img src="assets/Spa atmosferi.avif"
+            alt="Spa atmosferi">
+          <img src="assets/Masaj.avif"
+            alt="Masaj">
+          <img src="assets/Spa oda.avif"
+            alt="Spa oda">
+          <img src="assets/Spa bakım.avif"
+            alt="Spa bakım">
+          <img src="assets/Masaj terapisi.avif"
+            alt="Masaj terapisi">
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="hakkimizda">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow">Neden Sorella Spa?</div>
+          <h2>Zihninizi susturun,<br>bedeninizi dinlendirin.</h2>
+          <p>Bodrum'da VIP spa deneyimini; profesyonel terapi, kişiye özel odalar, geleneksel hamam ritüelleri ve modern
+            bakım anlayışıyla buluşturuyoruz.</p><a class="btn primary" href="#randevu">Randevu Oluştur</a>
+        </div>
+        <div class="feature-list">
+          <div>✓ Bodrum'da VIP Spa Deneyimi</div>
+          <div>✓ Kişiye Özel & İzole Odalar</div>
+          <div>✓ Uzman Masaj Terapistleri</div>
+          <div>✓ Geleneksel & Modern Uygulamalar</div>
+          <div>✓ Hijyenik & Güvenli Ortam</div>
+          <div>✓ Google 5.0 Misafir Memnuniyeti</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="iletisim">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">SORELLA SPA</div>
+          <p style="max-width:360px;margin-top:12px">Bodrum'da kendinize ayırdığınız zamanı özel bir spa deneyimine
+            dönüştürün.</p>
+        </div>
+        <div>
+          <h4>Hızlı Menü</h4><a href="#hizmetler">Hizmetler</a><a href="#vip">VIP Paketler</a><a
+            href="#galeri">Galeri</a><a href="#randevu">Randevu</a>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <p>Oasis AVM Yanı, Bodrum</p>
+          <p>12:00 – 00:00</p><a href="tel:+905418455403">+90 541 845 54 03</a><a href="https://wa.me/905418455403"
+            target="_blank">WhatsApp</a>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Sorella Spa Bodrum. Tüm hakları saklıdır.</div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box"><button class="close" onclick="closeBooking()">×</button>
+      <h3 style="font-family:'Cormorant Garamond';font-size:38px">Randevu Talebi</h3>
+      <p style="color:#766e64;margin:6px 0 20px">Bilgilerinizi girin; talebiniz WhatsApp üzerinden iletilsin.</p>
+      <div id="modalForm"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast">Randevu WhatsApp'a yönlendiriliyor…</div>
+  <script>
+    const WA = "905418455403";
+    const form = document.getElementById("bookingForm");
+    const modal = document.getElementById("modal");
+    function openBooking(service) {
+      document.getElementById("service").value = service;
+      document.getElementById("randevu").scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => document.getElementById("name").focus(), 500);
+    }
+    function closeBooking() { modal.classList.remove("open") }
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const service = document.getElementById("service").value, date = document.getElementById("date").value, time = document.getElementById("time").value, name = document.getElementById("name").value, phone = document.getElementById("phone").value, note = document.getElementById("note").value;
+      const msg = `Merhaba Sorella Spa, randevu talebim var.%0A%0A*Hizmet:* ${encodeURIComponent(service)}%0A*Tarih:* ${encodeURIComponent(date)}%0A*Saat:* ${encodeURIComponent(time)}%0A*Ad Soyad:* ${encodeURIComponent(name)}%0A*Telefon:* ${encodeURIComponent(phone)}%0A*Not:* ${encodeURIComponent(note || "-")}`;
+      document.getElementById("toast").style.display = "block";
+      setTimeout(() => { window.open(`https://wa.me/${WA}?text=${msg}`, "_blank"); document.getElementById("toast").style.display = "none" }, 700);
+    });
+    document.getElementById("date").min = new Date().toISOString().split("T")[0];
+  </script>
+</body>
+
+</html>
